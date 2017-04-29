@@ -118,25 +118,29 @@
 
         <div class="container">
             <div class="row">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                        <h2 class="section-heading">Overview<br></h2>
-                       <h3 class="section-subheading">Page View<br></h3>
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Overview<br></h2>
+                <h3 class="section-subheading">Page View<br></h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-5" "col-md-12">
+                    <div id="main1" style="width:400px;height:450px;"></div>
+                </div> 
+                <div class="col-lg-7" "col-md-12">
+                    <div id="main2" style="width: 700px;height:450px;"></div>
+                </div> 
+                <div class="row">
+                <div class="col-md-12">
+                    <p class="lead"> Due to the limitation of time, the analytics of <a target="_blank" href="https://jessiepyt.github.io/">my personal website</a> 
+                    only last for 7 days (22/4-28/4). Hence, the total page view is very low with only 25 views despite my effort to share it on Facebook,Twitter and LinkedIn.</p><br>
+                    <p class="lead"> Apart from that, the traffic to other sub-pages are is relatively uneven and low. Most stop by <a target="_blank" href="https://jessiepyt.github.io/homework1">Homework 1</a>
+                    and then soon lost interest to check out other. It may suggested I need to incoperate a more attractive design and clear flow towards my portfolio part.</p>
                 </div>
-               <div class="row">
-                   <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                       <div id="main1" style="width:400px;height:450px;"></div>
-	           </div>  
-               <div class="row">
-                   <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                       <br>
-                       <p class="lead">Due to the limitation of time, the analytics of <a target="_blank" href="https://jessiepyt.github.io/">my personal website</a> 
-                       only last for 7 days (22/4-28/4). Hence, the total page view is very low with only 25 views despite my effort to share it on Facebook,Twitter and LinkedIn.</p><br>
-                </div>
-
             </div>
         </div>
     </div>
+</div>
     <!-- /.content-section-a -->
 
     <div class="content-section-b">
@@ -295,6 +299,50 @@
             var myChart1 = echarts.init(document.getElementById('main1'));
             myChart1.setOption(option);
 	</script>
+
+        <script type="text/javascript">
+      option = {
+          "title" : {
+              "text": "Distribution of Page View",
+              "x":"center"
+            },
+            "tooltip" : {
+                "trigger": "item",
+                "formatter": "{a} <br/>{b} : {c} ({d}%)"
+            },
+            "legend": {
+                "orient": "vertical",
+                "align": "left",
+                "top": "20",
+                "left": "0",
+                "data": ["Main Page","Homework 1","Homework 3","Homework 4","Homework5"]
+            },
+            "series" : [
+                {
+                    "name": "Page View",
+                    "type": "pie",
+                    "radius" : "55%",
+                    "center": ["50%", "60%"],
+                    "data":[
+                        {"value":"16", "name":"Main Page"},
+                        {"value":"5", "name":"Homework 1"},
+                        {"value":"2", "name":"Homework 3"},
+                        {"value":"1", "name":"Homework 4"},
+                        {"value":"1", "name":"Homework 5"}
+                        ],
+                        "itemStyle": {
+                            "emphasis": {
+                                "shadowBlur": "10",
+                                "shadowOffsetX": "0",
+                                "shadowColor": 'rgba(0, 0, 0, 0.5)'
+                            }  
+                        }
+                    }
+                ]
+            };
+            var myChart2 = echarts.init(document.getElementById('main2'));
+            myChart2.setOption(option);
+    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
