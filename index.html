@@ -121,82 +121,20 @@
                 <div class="col-lg-12">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
+                        <h2 class="section-heading">Overview<br></h2>
+                       <h3 class="section-subheading">Page View<br></h3>
                 </div>
-                    <h2 class="section-heading">Overview<br></h2>
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <h3 class="section-subheading">Page View<br></h3>
-                    <p class="lead">Due to the limitation of time, the analytics of <a target="_blank" href="https://jessiepyt.github.io/">my personal website</a> 
-                    only last for 7 days (22/4-28/4). Hence, the total page view is very low with only 25 views despite my effort to share it on Facebook,Twitter and LinkedIn.</p><br>
+               <div class="row">
+                   <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                       <div id="main1" style="width:400px;height:450px;"></div>
+	           </div>  
+               <div class="row">
+                   <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                       <br>
+                       <p class="lead">Due to the limitation of time, the analytics of <a target="_blank" href="https://jessiepyt.github.io/">my personal website</a> 
+                       only last for 7 days (22/4-28/4). Hence, the total page view is very low with only 25 views despite my effort to share it on Facebook,Twitter and LinkedIn.</p><br>
                 </div>
-                   <div class="row">
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                   <div id="main1" style="width:400px;height:450px;"></div>
-             
-<script type="text/javascript">
-      option = {
-                    "title" : {
-                        "text": "Total Page Views",
-                        "x":"center"
-                    },
-					"color": ["#ff3d3d", "#00a0e9"
-                    ],
-					"tooltip": {
-                        "trigger": "axis"
-					},
-					"legend": {
-					    "align": "left",
-                        "top": "20",
-                        "left": "0",
-						"data":["Page Views"],
-						"selected": {
-							"Page Views": "true"}
-					},
-					"grid": {
-						"left": "0",
-						"right": "3%",
-						"bottom": "3%",
-						"top":"13%",
-						"containLabel": "true"
-					},
-					"xAxis": {
-						"type": "category",
-						"boundaryGap": "false",
-						"splitLine":{
-			                "show": "true",
-			                "lineStyle":{
-			                    "color":["#b1b1b1"],
-			                    "type":"dashed"
-			                }
-			            },
-						"data": ["22 April","23 April","24 April","25 April","26 April","27 April","28 April"]
-					},
-					"yAxis": {
-						"splitLine":{
-			                "show": "true",
-			                "lineStyle":{
-			                    "color":["#b1b1b1"],
-			                    "type":"dashed"
-			                }
-			            }
-					},
-					"series": [
-						{
-							"name":"Page Views",
-							"type":"line",
-							"data":["0", "0", "7", "1", "4", "7", "1", "12"],
-							"label": {
-								"normal": {
-									"show": "true",
-									"position": "top"
-								}
-							}
-						},
-					]
-				};
-            var myChart1 = echarts.init(document.getElementById('main1'));
-            myChart1.setOption(option);
-	</script>
-	</div>  
+
             </div>
         </div>
     </div>
@@ -293,6 +231,71 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript">
+      option = {
+                    "title" : {
+                        "text": "Total Page Views",
+                        "x":"center"
+                    },
+					"color": ["#ff3d3d", "#00a0e9"
+                    ],
+					"tooltip": {
+                        "trigger": "axis"
+					},
+					"legend": {
+					    "align": "left",
+                        "top": "20",
+                        "left": "0",
+						"data":["Page Views"],
+						"selected": {
+							"Page Views": "true"}
+					},
+					"grid": {
+						"left": "0",
+						"right": "3%",
+						"bottom": "3%",
+						"top":"13%",
+						"containLabel": "true"
+					},
+					"xAxis": {
+						"type": "category",
+						"boundaryGap": "false",
+						"splitLine":{
+			                "show": "true",
+			                "lineStyle":{
+			                    "color":["#b1b1b1"],
+			                    "type":"dashed"
+			                }
+			            },
+						"data": ["22 April","23 April","24 April","25 April","26 April","27 April","28 April"]
+					},
+					"yAxis": {
+						"splitLine":{
+			                "show": "true",
+			                "lineStyle":{
+			                    "color":["#b1b1b1"],
+			                    "type":"dashed"
+			                }
+			            }
+					},
+					"series": [
+						{
+							"name":"Page Views",
+							"type":"line",
+							"data":["0", "0", "7", "1", "4", "7", "1", "12"],
+							"label": {
+								"normal": {
+									"show": "true",
+									"position": "top"
+								}
+							}
+						},
+					]
+				};
+            var myChart1 = echarts.init(document.getElementById('main1'));
+            myChart1.setOption(option);
+	</script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
