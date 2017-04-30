@@ -171,11 +171,14 @@
                 </div>
              </div>
              <div class="col-lg-5" "col-md-12">
-                    <div id="main5" style="width: 500px;height:450px;"></div>
+                    <div id="main5" style="width: 500px;height:550px;"></div>
+                </div> 
+            <div class="col-lg-5" "col-md-12">
+                    <div id="main6" style="width: 500px;height:550px;"></div>
                 </div> 
             <div class="row">
                 <div class="col-md-12">
-                    <p class="lead"> Meanwhile, the majority of visitors use desktop to browse the website.  </p><br>
+                    <p class="lead"> Meanwhile, the majority of visitors use desktop via Chrome to browse the website.  </p><br>
                 </div>
             </div>
        </div>
@@ -454,7 +457,7 @@ option = {
     "xAxis": [{
         "type": "category",
         "data": [
-            2016
+            2017
         ],
         "axisTick": {
             "alignWithLabel": true
@@ -488,6 +491,63 @@ option = {
             var myChart5 = echarts.init(document.getElementById('main5'));
             myChart5.setOption(option);
     </script>
+
+       <script type="text/javascript">
+option = {
+    "title": {
+        "text": "Browser & OS used by Vistor",
+        "x":"center"
+    },
+    "legend": {
+        "data": ["Chrome","Safari","Android Webview"],
+        "align": "left",
+        "top": 20,
+        "left": 0
+    },
+    "xAxis": [{
+        "type": "category",
+        "data": [
+            2017
+        ],
+        "axisTick": {
+            "alignWithLabel": true
+        }
+    }],
+    "yAxis": [{
+        "type": "value"
+    }],
+    "series": [{
+        "name": "Chrome",
+        "type": "bar",
+        "data": [
+           17
+        ],"markPoint":{
+            "data":[
+                {
+                    "type":"max",
+                    "name":"maxmax"
+                }
+            ]
+        }
+    }, {
+        "name": "Safari",
+        "type": "bar",
+        "data": [
+          2
+        ],
+    }, {
+        "name": "Android Webview",
+        "type": "bar",
+        "data": [
+          1
+        ],
+    }
+    ]
+};
+            var myChart6 = echarts.init(document.getElementById('main6'));
+            myChart6.setOption(option);
+    </script>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
