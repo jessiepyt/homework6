@@ -33,7 +33,6 @@
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <script src="leaflet.ajax.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/timeline.css">
-
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -165,9 +164,10 @@
                 <div class="col-lg-7" "col-md-12">
                     <div id="main4" style="width: 500px;height:450px;"></div>
                 </div> 
-                <div class="col-lg-7" "col-md-12">
-                    <div id="main5" style="width: 500px;height:500px;"></div>
-                </div> 
+                <div class="row">
+                <div class="col-md-12">
+                    <p class="lead"> There are more returning visitors than new visitors while the majority of vistors uses English (US) for langague. </p><br>
+                </div>
              </div>
        </div>
    </div>
@@ -429,63 +429,6 @@
             var myChart4 = echarts.init(document.getElementById('main4'));
             myChart4.setOption(option);
     </script>
-    <script type="text/javascript">
-    option = {
-    title: {
-        text: 'Location of the vistors',
-        left: 'center',
-        top: 'top'
-    },
-    tooltip: {
-        trigger: 'item',
-        formatter: function (params) {
-            var value = (params.value + '').split('.');
-            value = value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,')
-                    + '.' + value[1];
-            return params.seriesName + '<br/>' + params.name + ' : ' + value;
-        }
-    },
-    toolbox: {
-        show: true,
-        orient: 'vertical',
-        left: 'right',
-        top: 'center',
-        feature: {
-            dataView: {readOnly: false},
-            restore: {},
-            saveAsImage: {}
-        }
-    },
-    visualMap: {
-        min: 0,
-        max: 25,
-        text:['High','Low'],
-        realtime: false,
-        calculable: true,
-        inRange: {
-            color: ['lightskyblue','yellow', 'orangered']
-        }
-    },
-    series: [
-        {
-            name: 'Location of visitor',
-            type: 'map',
-            mapType: 'world',
-            roam: true,
-            itemStyle:{
-                emphasis:{label:{show:true}}
-            },
-            data:[
-                {name: 'China', value: 2},
-                {name: 'Hong Kong', value: 16},
-                {name: 'Pakistan', value: 2},
-            ]
-        }
-    ]
-};
-   var myChart5 = echarts.init(document.getElementById('main5'));
-            myChart5.setOption(option);
- </script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
