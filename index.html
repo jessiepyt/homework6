@@ -169,6 +169,14 @@
                     <p class="lead"> There are more returning visitors than new visitors while the majority of vistors uses English (US) for langague. </p><br>
                 </div>
              </div>
+             <div class="col-lg-5" "col-md-12">
+                    <div id="main5" style="width: 500px;height:450px;"></div>
+                </div> 
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead"> Meanwhile, the majority of visitor use desktop to browse the website.  </p><br>
+                </div>
+            </div>
        </div>
    </div>
 </div>
@@ -428,6 +436,56 @@
             };
             var myChart4 = echarts.init(document.getElementById('main4'));
             myChart4.setOption(option);
+    </script>
+
+   <script type="text/javascript">
+option = {
+    "title": {
+        "text": "Device used by Vistor",
+        "x":"center"
+    },
+    "legend": {
+        "data": ["Desktop", "Mobile"],
+        "align": "left",
+        "top": 20,
+        "left": 0
+    },
+    "xAxis": [{
+        "type": "category",
+        "data": [
+            2016
+        ],
+        "axisTick": {
+            "alignWithLabel": true
+        }
+    }],
+    "yAxis": [{
+        "type": "value"
+    }],
+    "series": [{
+        "name": "Desktop",
+        "type": "bar",
+        "data": [
+           14
+        ],"markPoint":{
+            "data":[
+                {
+                    "type":"max",
+                    "name":"maxmax"
+                }
+            ]
+        }
+    }, {
+        "name": "Mobile",
+        "type": "bar",
+        "data": [
+          6
+        ],
+    }
+    ]
+};
+            var myChart5 = echarts.init(document.getElementById('main5'));
+            myChart5.setOption(option);
     </script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
